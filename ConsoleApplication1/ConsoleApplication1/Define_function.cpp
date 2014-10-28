@@ -63,3 +63,33 @@ maximum_subarray Max_cross_subarray(vector<int> A, vector<int>::iterator low, ve
 	maximum_subarray cross_sub(l_sub.get_low(), r_sub.get_high());
 	return cross_sub;
 }
+//a linear running time to handle maximum subarray,exercise 4.1-5(introduction to algorithms)
+maximum_subarray Linear_find_max(vector<int> A, vector<int>::iterator low, vector<int>::iterator high)
+{
+	//define a variable to hold the first positive number
+	vector<int>::iterator curr = low;
+	/*while (*curr<=0)
+	{
+		++curr;
+
+	}*/
+	//using two class objects to hold the current maximum subarray and 
+	maximum_subarray curr_sum(curr, curr);
+	for (vector<int>::iterator beg=low; beg != high; ++beg)
+	{
+		maximum_subarray sum(curr, beg);
+		if (sum.get_sum() <= 0)
+		{
+			curr = beg + 1;
+		}
+		else
+		{
+			if (sum.get_sum() > curr_sum.get_sum())
+			{
+				curr_sum = sum;
+
+			}
+		}
+	}
+	return curr_sum;
+}

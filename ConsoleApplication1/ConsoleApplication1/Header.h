@@ -21,3 +21,5 @@ private:
 };
 maximum_subarray Find_maximum_subarray(vector<int> A, vector<int>::iterator low, vector<int>::iterator high);
 maximum_subarray Max_cross_subarray(vector<int> A, vector<int>::iterator low, vector<int>::iterator middle, vector<int>::iterator high);
+// a linear running time to handle maximum subarray
+maximum_subarray Linear_find_max(vector<int> A, vector<int>::iterator low, vector<int>::iterator high);
