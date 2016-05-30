@@ -23,3 +23,7 @@ maximum_subarray Find_maximum_subarray(vector<int> A, vector<int>::iterator low,
 maximum_subarray Max_cross_subarray(vector<int> A, vector<int>::iterator low, vector<int>::iterator middle, vector<int>::iterator high);
 // a linear running time to handle maximum subarray
 maximum_subarray Linear_find_max(vector<int> A, vector<int>::iterator low, vector<int>::iterator high);
+//matrices multiplications,C=A*B
+vector<vector<double>> matrices_multi(vector<vector<double>> A, vector<vector<double>> B);
+//strassen's method of matrices multiplication ,the running time of this algorithm is lower than o(n*n*n) is o(n lg7) ,lg7 is a upper notation.
+
